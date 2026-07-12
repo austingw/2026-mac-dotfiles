@@ -38,3 +38,5 @@ end
 # bun
 set --export BUN_INSTALL "$HOME/.bun"
 set --export PATH $BUN_INSTALL/bin $PATH
+set --export PI_CONFIG_DIR "$HOME/.config/pi"
+set --export PI_CODING_AGENT_DIR "$HOME/.config/pi/agent"
