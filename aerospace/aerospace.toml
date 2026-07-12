@@ -25,9 +25,14 @@ on-focused-monitor-changed = ['move-mouse monitor-lazy-center']
     '''
 
     # i3 wraps focus by default
-    cmd-shift-h =         'focus --boundaries-action wrap-around-the-workspace left'
-    cmd-shift-j =         'focus --boundaries-action wrap-around-the-workspace down'
-    cmd-shift-k =         'focus --boundaries-action wrap-around-the-workspace up'
+    cmd-left =         'focus --boundaries-action wrap-around-the-workspace left'
+    cmd-down =         'focus --boundaries-action wrap-around-the-workspace down'
+    cmd-up =         'focus --boundaries-action wrap-around-the-workspace up'
+    cmd-right = 'focus --boundaries-action wrap-around-the-workspace right'
+
+    cmd-shift-h = 'focus --boundaries-action wrap-around-the-workspace left'
+    cmd-shift-j = 'focus --boundaries-action wrap-around-the-workspace down'
+    cmd-shift-k = 'focus --boundaries-action wrap-around-the-workspace up'
     cmd-shift-l = 'focus --boundaries-action wrap-around-the-workspace right'
 
     cmd-shift-left = 'move left'
@@ -37,8 +42,8 @@ on-focused-monitor-changed = ['move-mouse monitor-lazy-center']
 
     # Consider using 'join-with' command as a 'split' replacement if you want to enable
     # normalizations
-    cmd-ctrl-shift-h = 'split horizontal'
-    cmd-ctrl-shift-v = 'split vertical'
+    cmd-ctrl-alt-h = 'split horizontal'
+    cmd-ctrl-alt-v = 'split vertical'
 
     cmd-shift-f = 'fullscreen'
 
@@ -56,33 +61,38 @@ on-focused-monitor-changed = ['move-mouse monitor-lazy-center']
     # should be supported at all https://github.com/nikitabobko/AeroSpace/issues/5
     # cmd-a = 'focus parent'
 
-    cmd-1 = 'workspace 1'
-    cmd-2 = 'workspace 2'
-    cmd-3 = 'workspace 3'
-    cmd-4 = 'workspace 4'
-    cmd-5 = 'workspace 5'
-    cmd-6 = 'workspace 6'
-    cmd-7 = 'workspace 7'
-    cmd-8 = 'workspace 8'
-    cmd-9 = 'workspace 9'
-    cmd-0 = 'workspace 10'
+    ctrl-1 = 'workspace 1'
+    ctrl-2 = 'workspace 2'
+    ctrl-3 = 'workspace 3'
+    ctrl-4 = 'workspace 4'
+    ctrl-5 = 'workspace 5'
+    ctrl-6 = 'workspace 6'
+    ctrl-7 = 'workspace 7'
+    ctrl-8 = 'workspace 8'
+    ctrl-9 = 'workspace 9'
+    ctrl-0 = 'workspace 10'
 
-    cmd-shift-n = 'workspace next'
-    cmd-shift-p = 'workspace prev'
+    ctrl-cmd-h = 'workspace prev'
+    ctrl-cmd-j = 'workspace next'
+    ctrl-cmd-l = 'workspace next'
+    ctrl-cmd-k = 'workspace prev'
 
-    cmd-shift-1 = 'move-node-to-workspace --focus-follows-window 1'
-    cmd-shift-2 = 'move-node-to-workspace --focus-follows-window 2'
-    cmd-shift-3 = 'move-node-to-workspace --focus-follows-window 3'
-    cmd-shift-4 = 'move-node-to-workspace --focus-follows-window 4'
-    cmd-shift-5 = 'move-node-to-workspace --focus-follows-window 5'
-    cmd-shift-6 = 'move-node-to-workspace --focus-follows-window 6'
-    cmd-shift-7 = 'move-node-to-workspace --focus-follows-window 7'
-    cmd-shift-8 = 'move-node-to-workspace --focus-follows-window 8'
-    cmd-shift-9 = 'move-node-to-workspace --focus-follows-window 9'
-    cmd-shift-0 = 'move-node-to-workspace --focus-follows-window 10'
+    ctrl-shift-1 = 'move-node-to-workspace --focus-follows-window 1'
+    ctrl-shift-2 = 'move-node-to-workspace --focus-follows-window 2'
+    ctrl-shift-3 = 'move-node-to-workspace --focus-follows-window 3'
+    ctrl-shift-4 = 'move-node-to-workspace --focus-follows-window 4'
+    ctrl-shift-5 = 'move-node-to-workspace --focus-follows-window 5'
+    ctrl-shift-6 = 'move-node-to-workspace --focus-follows-window 6'
+    ctrl-shift-7 = 'move-node-to-workspace --focus-follows-window 7'
+    ctrl-shift-8 = 'move-node-to-workspace --focus-follows-window 8'
+    ctrl-shift-9 = 'move-node-to-workspace --focus-follows-window 9'
+    ctrl-shift-0 = 'move-node-to-workspace --focus-follows-window 10'
 
-    cmd-ctrl-n = 'move-node-to-workspace --focus-follows-window next'
-    cmd-ctrl-p = 'move-node-to-workspace --focus-follows-window prev'
+
+    ctrl-cmd-down = 'move-node-to-workspace --focus-follows-window next'
+    ctrl-cmd-right = 'move-node-to-workspace --focus-follows-window next'
+    ctrl-cmd-left = 'move-node-to-workspace --focus-follows-window prev'
+    ctrl-cmd-up = 'move-node-to-workspace --focus-follows-window prev'
 
     cmd-shift-c = 'reload-config'
 
