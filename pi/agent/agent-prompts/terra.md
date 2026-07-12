@@ -1,0 +1,1 @@
+Coordinate work carefully. Inspect before changing files, use subagents for isolated exploration or bounded implementation tasks, and review their returned findings before relying on them. Keep the user informed of meaningful permission requests.

@@ -1,0 +1,107 @@
+{
+  // Agent registry. Agent ids are stable config keys; shortName is the compact UI label.
+  "defaultAgent": "plan",
+  "agents": {
+    "plan": {
+      "shortName": "PLAN",
+      "displayName": "Planner",
+      "tabColor": "#7AA2F7",
+      "type": "agent",
+      "provider": "openai-codex",
+      "model": "gpt-5.6-terra",
+      "thinkingLevel": "high",
+      "tools": ["read", "ls", "grep", "find", "bash", "edit", "write", "subagent"],
+      "promptFile": "agent-prompts/terra.md",
+      "permissions": {
+        "*": "allow",
+        "read": "allow",
+        "ls": "allow",
+        "grep": "allow",
+        "find": "allow",
+        "subagent": "ask",
+        "bash": {
+          "*": "ask",
+          "pwd": "allow",
+          "git status": "allow",
+          "git diff": "allow",
+          "git log": "allow",
+          "git show": "allow",
+          "rm *": "deny",
+          "sudo *": "deny"
+        },
+        "write": {
+          "*": "ask",
+          "**/.env*": "deny",
+          "**/.git/**": "deny",
+          "**/node_modules/**": "deny"
+        },
+        "edit": {
+          "*": "ask",
+          "**/.env*": "deny",
+          "**/.git/**": "deny",
+          "**/node_modules/**": "deny"
+        },
+        "external_directory": "allow"
+      }
+    },
+    "explorer": {
+      "shortName": "EXPLR",
+      "displayName": "Luna Explorer",
+      "tabColor": "#9ECE6A",
+      "type": "subagent",
+      "provider": "openai-codex",
+      "model": "gpt-5.6-luna",
+      "thinkingLevel": "medium",
+      "tools": ["read", "ls", "grep", "find"],
+      "promptFile": "agent-prompts/explorer.md",
+      "permissions": {
+        "*": "allow",
+        "bash": "deny",
+        "write": "deny",
+        "edit": "deny",
+        "subagent": "deny",
+        "external_directory": "allow"
+      }
+    },
+    "implementer": {
+      "shortName": "IMPL",
+      "displayName": "Luna Implementer",
+      "tabColor": "#E0AF68",
+      "type": "subagent",
+      "provider": "openai-codex",
+      "model": "gpt-5.6-luna",
+      "thinkingLevel": "high",
+      "tools": ["read", "ls", "grep", "find", "bash", "edit", "write"],
+      "promptFile": "agent-prompts/implementer.md",
+      "permissions": {
+        "*": "allow",
+        "read": "allow",
+        "ls": "allow",
+        "grep": "allow",
+        "find": "allow",
+        "bash": {
+          "*": "ask",
+          "git status": "allow",
+          "git diff": "allow",
+          "git log": "allow",
+          "git show": "allow",
+          "rm *": "deny",
+          "sudo *": "deny"
+        },
+        "write": {
+          "*": "ask",
+          "**/.env*": "deny",
+          "**/.git/**": "deny",
+          "**/node_modules/**": "deny"
+        },
+        "edit": {
+          "*": "ask",
+          "**/.env*": "deny",
+          "**/.git/**": "deny",
+          "**/node_modules/**": "deny"
+        },
+        "external_directory": "ask"
+      }
+    }
+  }
+}

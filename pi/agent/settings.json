@@ -1,0 +1,26 @@
+{
+  "lastChangelogVersion": "0.80.6",
+  "defaultProvider": "openai-codex",
+  "defaultModel": "gpt-5.6-terra",
+  "defaultThinkingLevel": "high",
+  "theme": "dark",
+  "showHardwareCursor": true,
+  "editorPaddingX": 1,
+  "outputPad": 1,
+  "autocompleteMaxVisible": 10,
+  "terminal": {
+    "clearOnShrink": true,
+    "showTerminalProgress": true
+  },
+  "enabledModels": [
+    "gpt-5.6-*",
+    "claude-sonnet-5",
+    "claude-opus-*",
+    "deepseek-*",
+    "glm-5.2",
+    "mimo-v2.5",
+    "qwen3.7-*"
+  ],
+  "enableInstallTelemetry": false,
+  "doubleEscapeAction": "tree"
+}
